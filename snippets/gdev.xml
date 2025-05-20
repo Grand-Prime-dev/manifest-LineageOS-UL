@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="gdev" fetch="https://github.com/Grand-Prime-dev" revision="lineage-19.1"/>
+  <remove-project name="LineageOS-UL/android_vendor_lineage"/>
+  <remove-project name="LineageOS-UL/android_system_netd"/>
+
+  <!-- Samsung MSM8916 common repos -->
+  <project path="device/samsung/msm8916-common" name="android_device_samsung_msm8916-common" remote="gdev"/>
+  <project path="kernel/samsung/msm8916" name="android_kernel_samsung_msm8916" remote="gdev"/>
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="gdev"/>
+
+  <!-- LineageOS repos -->
+  <project path="external/sony/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" remote="github" revision="lineage-18.1"/>
+  <project path="hardware/samsung" name="LineageOS/android_hardware_samsung" remote="github" revision="lineage-19.1"/>
+
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8916/Android.mk" />
+  <project path="hardware/qcom-caf/msm8916/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="lineage-19.0-caf-msm8916" />
+  <project path="hardware/qcom-caf/msm8916/display" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-19.0-caf-msm8916" />
+  <project path="hardware/qcom-caf/msm8916/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="lineage-19.0-caf-msm8916" /> 
+  
+  <!-- Grand Prime specific trees -->
+  <project path="device/samsung/gprimelte-common" name="android_device_samsung_gprimelte-common" remote="gdev"/>
+  <project path="device/samsung/gprimeltexx" name="android_device_samsung_gprimeltexx" remote="gdev"/>
+
+  <!-- Qcom tree(s) -->
+  <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="gdev"/>
+
+  <!-- Other trees -->
+  <project path="vendor/lineage" name="android_vendor_lineage" remote="gdev"/>
+  <project path="system/netd" name="android_system_netd" remote="gdev"/>
+
+</manifest>
