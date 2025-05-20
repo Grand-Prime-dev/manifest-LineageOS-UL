@@ -3,6 +3,7 @@
   <remote name="gdev" fetch="https://github.com/Grand-Prime-dev" revision="lineage-19.1"/>
   <remove-project name="LineageOS-UL/android_vendor_lineage"/>
   <remove-project name="LineageOS-UL/android_system_netd"/>
+  <remove-project name="LineageOS-UL/android_system_bpf"/>
 
   <!-- Samsung MSM8916 common repos -->
   <project path="device/samsung/msm8916-common" name="android_device_samsung_msm8916-common" remote="gdev"/>
@@ -28,5 +29,6 @@
   <!-- Other trees -->
   <project path="vendor/lineage" name="android_vendor_lineage" remote="gdev"/>
   <project path="system/netd" name="android_system_netd" remote="gdev"/>
+  <project path="system/bpf" name="android_system_bpf" remote="gdev"/>
 
 </manifest>
